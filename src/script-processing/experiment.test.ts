@@ -14,6 +14,9 @@ describe(" test", () => {
         // this should not pass
         expect(replaceWordsInText(lorumIpsum, 1)).not.toEqual(lorumIpsum);
         expect(replaceWordsInText("basic",1)).toEqual("ba-ic")
+        expect(replaceWordsInText("Basic",2)).toEqual("B-c")
+
+        expect(replaceWordsInText("Basic: words in a script!",1)).toEqual("Ba-ic: wo-ds i- a scr-pt!")
     })
 
     it("create dictionary", () => {
@@ -22,6 +25,7 @@ describe(" test", () => {
         expect(creationWordMap("1.2?.3.   4!5",0)).toEqual(new Map([["1","1"],["2","2"],["3","3"],["4","4"],["5","5"]]))
 
         expect(creationWordMap("basic words", 1)).toEqual( new Map([["basic","ba-ic"],["words","wo-ds"]]))
+        expect(creationWordMap("basic words", 2)).toEqual( new Map([["basic","b-c"],["words","w-s"]]))
     })
 
     it("redact", () => {
@@ -30,5 +34,9 @@ describe(" test", () => {
         expect(redactLetters("basic",2)).toEqual("b-c")
         expect(redactLetters("basic",3)).toEqual("b-")
         expect(redactLetters("basic",4)).toEqual("b-")
+    })
+
+    it("redact in", () => {
+        expect(redactLetters("in", 1)).toEqual("i-")
     })
 })

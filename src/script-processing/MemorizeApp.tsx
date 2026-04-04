@@ -11,22 +11,22 @@ export function MemorizeApp() {
   // TODO: bold the first word of every new line before a colon to emphase character names
   // .replaceAll(/^(\w+):/, "<b>$1</b>")
 
-  function redactLess(){
-    if(redacted > 0){
-      setRedacted(redacted -1)
+  function redactLess() {
+    if (redacted > 0) {
+      setRedacted(redacted - 1)
     }
   }
-  
-  function redactMore(){
+
+  function redactMore() {
     setRedacted(redacted + 1)
   }
 
   return (
 
-    <div style={{ whiteSpace: 'pre-line' }}>    
-    <button title="<" onClick={redactLess}>{'<'}</button>
-    <button title=">" onClick={redactMore}>{'>'}</button>  
-    <p>Redaction level: {redacted}</p>
+    <div style={{ whiteSpace: 'pre-line' }}>
+      <button title="<" onClick={redactLess}>{'<'}</button>
+      <button title=">" onClick={redactMore}>{'>'}</button>
+      <p>Redaction level: {redacted}</p>
       <p>
         {displayScript}
       </p>
