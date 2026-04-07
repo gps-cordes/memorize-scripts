@@ -1,5 +1,5 @@
 import './App.css'
-import { MemorizeApp } from './script-processing/memorizeApp'
+import { MemorizeApp } from './script-processing/MemorizeApp'
 
 function App() {
 
