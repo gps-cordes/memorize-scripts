@@ -1,0 +1,25 @@
+.memorizeApp {
+    
+}
+
+.floatingHeader {
+    /* above everything */
+    z-index: 99;
+    
+    
+    /* Items be in a horrizontal line? */
+    position: fixed;
+    bottom: 0;
+    background-color:blanchedalmond;
+    padding: 10px;
+    width: 100%;
+    
+    height: 50px;
+    
+    display: flex;
+
+}
+
+.floatingHeader * {
+    flex-grow: 1
+}
