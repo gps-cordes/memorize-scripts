@@ -10,18 +10,18 @@ export function redactLetters(word: string, redact: number) {
     if (redact <= 0) {
         return word;
     }
-    const firstLether = word.charAt(0);
+    const firstLetter = word.charAt(0);
     if (word.length == 1) {
-        return firstLether
+        return firstLetter
     }
     if (word.length == 2) {
-        return firstLether + '-'
+        return firstLetter + '-'
     }
 
     const wordMinusFirstCharacter = word.substring(1)
     const middleOfWord = wordMinusFirstCharacter.length / 2;
     const placeholder = redact > 0 ? '-' : "";
-    const redactedWord = firstLether +
+    const redactedWord = firstLetter +
         wordMinusFirstCharacter.substring(0, middleOfWord - redact) +
         placeholder +
         wordMinusFirstCharacter.substring(middleOfWord - 1 + redact)
@@ -32,10 +32,8 @@ export function redactLetters(word: string, redact: number) {
 export function replaceWordsInText(text: string, redact?: number): string {
     const wordReplacements = creationWordMap(text, redact ?? 0);
 
-    let newText = text;
-
-    newText = newText.split(/([\s,;.!?]+)/).map((word) => {
+    // use /(regex)/ in the split keeps the delimiter in the resulting array  
+    return text.split(/([\s,;.!?]+)/).map((word) => {
         return wordReplacements.get(word) ?? word;
     }).join('');
-    return newText;
 }
