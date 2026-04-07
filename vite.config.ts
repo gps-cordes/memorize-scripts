@@ -3,10 +3,11 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import {qrcode} from 'vite-plugin-qrcode'
+import {viteSingleFile} from 'vite-plugin-singlefile'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), qrcode()],
+  plugins: [react(), qrcode(), viteSingleFile()],
   test: {
     environment: 'jsdom',
     setupFiles: './src/test/setup.ts',
