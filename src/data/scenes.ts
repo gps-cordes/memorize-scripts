@@ -109,3 +109,18 @@ Grosvenor: I do, cheerfully. I have long wished for a reasonable pretext for suc
 
 Bunthorne: Victory! I triumph!
 `
+
+export type SceneData = Map<string, {
+    scriptText: string,
+    speakers?: [string]
+}>
+
+export const sceneData: SceneData = new Map([
+    ["patience_act_ii_gros_bunthorn", {
+        scriptText: patience_act_ii_gros_bunthorn
+    }
+    ], ["patience_act_ii_gros_patience", {
+        scriptText: patience_act_ii_gros_patience
+    }]
+])
+
