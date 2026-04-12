@@ -23,3 +23,11 @@
 .floatingHeader * {
     flex-grow: 1
 }
+
+.sceneSelector {
+    width: 33%
+}
+
+.floatingHeader select {
+    width: 80%;
+}

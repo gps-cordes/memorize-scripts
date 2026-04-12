@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { replaceWordsInText } from "./scriptService";
-import { sceneData } from "../data/scenes";
+import { patience_act_ii_gros_bunthorn, sceneData } from "../data/scenes";
 
 import "./MemorizeApp.css"
 
@@ -16,7 +16,8 @@ export function MemorizeApp() {
     if (scripts && scripts.get(sceneName)) {
       return scripts.get(sceneName)!.scriptText;
     }
-    return "Lorum Ipsum Sonum Dolor"
+    // todo: this should be the first record in the map
+    return patience_act_ii_gros_bunthorn;
   }
 
 
@@ -50,9 +51,9 @@ export function MemorizeApp() {
     <div className="memorizeApp">
       <div className="floatingHeader" >
         <button title="<" onClick={redactLess}>{'<'}</button>
-        <div>
+        <div className="sceneSelector">
           <header>Redaction levels: <strong>{redacted}</strong></header>
-          <label>Scene</label>
+          <label></label>
           <select onChange={(e: React.ChangeEvent<HTMLSelectElement>) => changeScene(e)}>
             {
               [...sceneData].map(([sceneName]) => <option value={sceneName}>{sceneName}</option>)
@@ -64,6 +65,8 @@ export function MemorizeApp() {
       <div className="scriptText" style={{ whiteSpace: 'pre-line' }}>
         <p>
           {displayScript}
+          {/* Add white space on the bottom for space for the menu */}
+          <br /><br /><br /><br />
         </p>
       </div>
     </div>
