@@ -110,6 +110,183 @@ Grosvenor: I do, cheerfully. I have long wished for a reasonable pretext for suc
 Bunthorne: Victory! I triumph!
 `
 
+const patience_act_ii_grosvenor_maidens_1 = `
+(He  sits, they group around him .)
+
+	GROS. (aside)  The old, old tale.  How rapturously these maidens love me, and how hopelessly!  Oh, Patience, Patience, with the love of thee in my heart, what have I for these poor mad maidens but an unvalued pity?  Alas, they will die of hopeless love for me, as I shall die of hopeless love for thee!
+	ANGELA.  Sir, will it please you read to us?
+	GROS. (sighing)  Yes, child, if you will.  What shall I read?
+	ANGELA.  One of your own poems.
+	GROS.  One of my own poems?  Better not, my child.  They will not cure thee of thy love.
+	ELLA.  Mr. Bunthorne used to read us a poem of his own every day.
+	SAPHIR.  And, to do him justice, he read them extremely well.
+	GROS.  Oh, did he so?  Well, who am I that I should take upon myself to withhold my gifts from you?  What am I but a trustee?  Here is a decalet – a pure and simple thing, a very daisy – a babe might understand it.  To appreciate it, it is not necessary to think of anything at all.
+	ANGELA.  Let us think of nothing at all!
+	GROS. (recites)
+
+		Gentle Jane was as good as gold,
+		She always did as she was told;
+		 She never spoke when her mouth was full,
+			Or caught bluebottles their legs to pull,
+			Or spilt plum jam on her nice new frock,
+			Or put white mice in the eight-day clock,
+			Or vivisected her last new doll,
+			Or fostered a passion for alcohol.
+		And when she grew up she was given in marriage
+		To a first-class earl who keeps his carriage!
+
+	GROS.  I believe I am right in saying that there is not one word in that decalet which is calculated to bring the blush of shame to the cheek of modesty.
+	ANGELA.  Not one; it is purity itself.
+	GROS.  Here’s another.
+
+			Teasing Tom was a very bad boy,
+			 A great big squirt was his favourite toy;
+			He put live shrimps in his father’s boots,
+			And sewed up the sleeves of his Sunday suits;
+			He punched his poor little sisters’ heads,
+			And cayenne-peppered their four-post beds;
+			He plastered their hair with cobbler’s wax,
+			And dropped hot halfpennies down their backs.
+		The consequence was he was lost totally,
+		And married a girl in the corps de bally!
+
+	ANGELA.  Marked you how grandly – how relentlessly – the damning catalogue of crime strode on, till Retribution, like a poisèd hawk, came swooping down upon the Wrong-Doer?  Oh, it was terrible! 
+	ELLA.  Oh, sir, you are indeed a true poet, for you touch our hearts, and they go out to you!
+	GROS. (aside)  This is simply cloying.  (Aloud.) Ladies, I am sorry to appear ungallant, but this is Saturday, and you have been following me about ever since Monday.  I should like the usual half-holiday.  I shall take it as a personal favour if you will kindly allow me to close early to-day.
+	SAPHIR.  Oh, sir, do not send us from you!
+	GROS.  Poor, poor girls!  It is best to speak plainly.  I know that I am loved by you, but I never can love you in return, for my heart is fixed elsewhere!  Remember the fable of the Magnet and the Churn.
+	ANGELA. (wildly)  But we don’t know the fable of the Magnet and the Churn!
+	GROS.  Don’t you?  Then I will sing it to you.
+`
+const patience_act_ii_gros_maidens_silver_church = ` 
+SONG – GROSVENOR.
+	A magnet hung in a hardware shop,
+	And all around was a loving crop
+	 Of scissors and needles, nails and knives,
+	Offering love for all their lives;
+	But for iron the magnet felt no whim,
+	Though he charmed iron, it charmed not him;
+	From needles and nails and knives he’d turn,
+	For he’d set his love on a Silver Churn!
+
+MAIDENS.	A Silver Churn?
+GROSVENOR.	A Silver Churn!
+			His most æsthetic,
+			Very magnetic
+		Fancy took this turn –
+			“If I can wheedle
+				A knife or a needle,
+		Why not a Silver Churn?”
+
+MAIDENS.	His most æsthetic, etc.
+
+GROSVENOR.	And Iron and Steel expressed surprise,
+	The needles opened their well-drilled eyes,
+	The penknives felt “shut up”, no doubt,
+	The scissors declared themselves “cut out”,
+	The kettles they boiled with rage, ’tis said,
+	While every nail went off its head,
+	And hither and thither began to roam,
+	Till a hammer came up and drove them home.
+
+MAIDENS.	It drove them home?
+GROSVENOR.	It drove them home!
+			While this magnetic,
+			Peripatetic
+		Lover he lived to learn,
+			By no endeavour
+			Can magnet ever
+		Attract a Silver Churn!
+
+MAIDENS.	While this magnetic, etc.
+`
+
+const patience_act_ii_grosvenor_patience = `
+GROS.  At last they are gone!  What is this mysterious fascination that I seem to exercise over all I come across?  A curse on my fatal beauty, for I am sick of conquests!  
+
+(PATIENCE appears.)
+
+	PATIENCE. Archibald!
+	GROS.  (Turns and sees her.)  Patience!
+	PATIENCE.  I have escaped with difficulty from my Reginald.  I wanted to see you so much that I might ask you if you still love me as fondly as ever?
+	GROS.  Love you?  If the devotion of a lifetime – (Seizes her hand.)
+	PATIENCE. (indignantly)  Hold!  Unhand me, or I scream!  (He releases her.)  If you are a gentleman, pray remember that I am another’s!  (Very tenderly.)  But you do love me, don’t you?
+	GROS.  Madly, hopelessly, despairingly!
+	PATIENCE.  That’s right!  I never can be yours; but that’s right!
+	GROS.  And you love this Bunthorne?
+	PATIENCE.  With a heart-whole ecstasy that withers, and scorches, and burns, and stings!  (Sadly.)  It is my duty.
+	GROS.  Admirable girl!  But you are not happy with him?
+	PATIENCE.  Happy?  I am miserable beyond description!
+	GROS.  That’s right!  I never can be yours; but that’s right!
+	PATIENCE.  But go now.  I see dear Reginald approaching.  Farewell, dear Archibald; I cannot tell you how happy it has made me to know that you still love me.
+	GROS.  Ah, if I only dared – (Advances towards her.)
+	PATIENCE.  Sir! this language to one who is promised to another!  (Tenderly.)  Oh, Archibald, think of me sometimes, for my heart is breaking!  He is unkind to me, and you would be so loving!
+	GROS.  Loving!  (Advances towards her.)
+	PATIENCE.  Advance one step, and as I am a good and pure woman, I scream!  (Tenderly.)  Farewell, Archibald!  (Sternly.)  Stop there!  (Tenderly.)  Think of me sometimes!  (Angrily.)  Advance at your peril!  Once more, adieu!
+
+(GROSVENOR sighs, gazes sorrowfully at her, sighs deeply, and exits.  She bursts into tears.)
+`
+
+const patience_act_ii_gros_bunthorn_duet = `
+DUET – BUNTHORNE and GROSVENOR.
+
+BUNTHORNE.	When I go out of door,
+	Of damozels a score
+		 (All sighing and burning,
+		And clinging and yearning)
+	Will follow me as before.
+	I shall, with cultured taste,
+	Distinguish gems from paste,
+		And “High diddle diddle”
+		Will rank as an idyll,
+	If I pronounce it chaste!
+
+BOTH.		A most intense young man,
+		A soulful-eyed young man,
+	An ultra-poetical, super-æsthetical,
+		Out-of-the-way young man!
+
+GROSVENOR.	Conceive me, if you can,
+	An every-day young man:
+		A commonplace type,
+		With a stick and a pipe,
+	And a half-bred black-and-tan;
+		Who thinks suburban “hops”
+		More fun than “Monday Pops”,
+	Who’s fond of his dinner,
+	And doesn’t get thinner
+		On bottled beer and chops.
+
+BOTH.		A commonplace young man,
+		A matter-of-fact young man,
+	A steady and stolid-y, jolly Bank-holiday,
+		Every-day young man!
+
+BUNTHORNE.		A Japanese young man,
+		A blue-and-white young man,
+	Francesca di Rimini, miminy, piminy,
+		Je-ne-sais-quoi young man!
+
+GROSVENOR.		A Chancery lane young man,
+		A Somerset House young man,
+	A very delectable, highly respectable
+		Threepenny-bus young man!
+
+BUNTHORNE.		A pallid and thin young man,
+		A haggard and lank young man,
+	A greenery-yallery, Grosvenor Gallery,
+		Foot-in-the-grave young man!
+
+GROSVENOR.		A Sewell & Cross young man,
+		A Howell & James young man,
+	A pushing young particle – “What’s the next article?” –
+		Waterloo House young man!
+
+	BUNTHORNE.	GROSVENOR.
+	Conceive me, if you can,	Conceive me, if you can,
+	A crotchety, cracked young man,	A matter-of-fact young man,
+	An ultra-poetical, super-æsthetical,	An alphabetical, arithmetical,
+	Out-of-the way young man!	Everyday young man!`
 export type SceneData = Map<string, {
     scriptText: string,
     speakers?: [string]
@@ -121,6 +298,11 @@ export const sceneData: SceneData = new Map([
     }
     ], ["patience_act_ii_gros_patience", {
         scriptText: patience_act_ii_gros_patience
-    }]
+    }], ["patience_act_ii_grosvenor_maidens_1", {
+        scriptText: patience_act_ii_grosvenor_maidens_1
+    }], ["patience_act_ii_gros_bunthorn_duet", {
+        scriptText: patience_act_ii_gros_bunthorn_duet
+    }], ["patience_act_ii_gros_maidens_silver_churn", 
+        { scriptText: patience_act_ii_gros_maidens_silver_church }]
 ])
 
