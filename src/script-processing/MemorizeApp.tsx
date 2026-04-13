@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { replaceWordsInText } from "./scriptService";
+import { boldFirstWordOfLine, replaceWordsInText } from "./scriptService";
 import { patience_act_ii_gros_bunthorn, sceneData } from "../data/scenes";
 
 import "./MemorizeApp.css"
@@ -46,6 +46,7 @@ export function MemorizeApp() {
   //TODO: upload own text
   //TODO: Store uploaded text in browser cache / cookie
   //TODO: Bold and highlight character names in different colors
+  //TODO: Sanitize the script of html before starting to bold it
 
   return (
     <div className="memorizeApp">
@@ -64,7 +65,7 @@ export function MemorizeApp() {
       </div>
       <div className="scriptText" style={{ whiteSpace: 'pre-line' }}>
         <p>
-          {displayScript}
+          <div dangerouslySetInnerHTML={{__html: boldFirstWordOfLine(displayScript)}} />
           {/* Add white space on the bottom for space for the menu */}
           <br /><br /><br /><br />
         </p>

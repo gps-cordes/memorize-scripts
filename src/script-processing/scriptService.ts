@@ -29,11 +29,18 @@ export function redactLetters(word: string, redact: number) {
     return redactedWord;
 }
 
+export function boldFirstWordOfLine(text: string) {
+    return text.split(/(\n)/).map(line => line.replace(/^\s*([\w]+[.:])/, "<strong>$1</strong>")).join('')
+}
+
 export function replaceWordsInText(text: string, redact?: number): string {
     const wordReplacements = creationWordMap(text, redact ?? 0);
 
     // use /(regex)/ in the split keeps the delimiter in the resulting array  
-    return text.split(/([\s,;.!?]+)/).map((word) => {
+    const newText = text.split(/([\s,;.!?]+)/).map((word) => {
         return wordReplacements.get(word) ?? word;
     }).join('');
+
+    return newText
+
 }
