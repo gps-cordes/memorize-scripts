@@ -287,22 +287,116 @@ GROSVENOR.		A Sewell & Cross young man,
 	A crotchety, cracked young man,	A matter-of-fact young man,
 	An ultra-poetical, super-æsthetical,	An alphabetical, arithmetical,
 	Out-of-the way young man!	Everyday young man!`
+
+
+const patience_act_i_gros_patience_duet_and_dialogue = `
+PATIENCE.  It’s perfectly dreadful to think of the appalling state I must be in!  I had no idea that love was a duty.  No wonder they all look so unhappy!  Upon my word, I hardly like to associate with myself.  I don’t think I’m respectable.  I’ll go at once and fall in love with... (Enter GROSVENOR.) a stranger!
+
+DUET – PATIENCE and GROSVENOR.
+GROSVENOR.	Prithee, pretty maiden – prithee, tell me true,
+		(Hey, but I’m doleful, willow willow waly!)
+	Have you e’er a lover a-dangling after you?
+			Hey willow waly O!
+				I would fain discover
+				If you have a lover!
+			Hey willow waly O!
+
+PATIENCE.	Gentle sir, my heart is frolicsome and free –
+		(Hey, but he’s doleful, willow willow waly!)
+	Nobody I care for comes a-courting me –
+			Hey willow waly O!
+				Nobody I care for
+				Comes a-courting – therefore,
+			Hey willow waly O!
+
+GROSVENOR.	 Prithee, pretty maiden, will you marry me?
+		(Hey, but I’m hopeful, willow willow waly!)
+	I may say, at once, I’m a man of propertee –
+			Hey willow waly O!
+				Money, I despise it,
+				Many people prize it,
+			Hey willow waly O!
+
+PATIENCE.	Gentle sir, although to marry I design –
+		(Hey, but he’s hopeful, willow willow waly!)
+	As yet I do not know you, and so I must decline.
+			Hey willow waly O!
+				To other maidens go you –
+				As yet I do not know you,
+BOTH.			Hey willow waly O!
+
+	GROS.  Patience!  Can it be that you don’t recognize me?
+	PATIENCE.  Recognize you?  No, indeed I don’t!
+	GROS.  Have fifteen years so greatly changed me?
+	PATIENCE.  Fifteen years?  What do you mean?
+	GROS. Have you forgotten the friend of your youth, your Archibald? – your little playfellow?  Oh, Chronos, Chronos, this is too bad of you!
+	PATIENCE.  Archibald!  Is it possible?  Why, let me look!  It is! It is! It must be!  Oh, how happy I am! I thought we should never meet again!  And how you’ve grown!
+	GROS.  Yes, Patience, I am much taller and much stouter than I
+was.
+	PATIENCE.  And how you’ve improved!
+	GROS.  Yes, Patience, I am very beautiful!  (Sighs.)
+	PATIENCE.  But surely that doesn’t make you unhappy?
+	GROS.  Yes, Patience.  Gifted as I am with a beauty which probably has not its rival on earth, I am, nevertheless, utterly and completely miserable.
+	PATIENCE.  Oh – but why?
+	GROS.  My child-love for you has never faded.  Conceive, then, the horror of my situation when I tell you that it is my hideous destiny to be madly loved at first sight by every woman I come across!
+	PATIENCE.  But why do you make yourself so picturesque?  Why not
+disguise yourself, disfigure yourself, anything to escape this persecution?
+	GROS.  No, Patience, that may not be.  These gifts – irksome as they are – were given to me for the enjoyment and delectation of my fellow-creatures.  I am a trustee for Beauty, and it is my duty to see that the conditions of my trust are faithfully discharged.
+	PATIENCE.  And you, too, are a Poet?
+	GROS.  Yes, I am the Apostle of Simplicity.  I am called “Archibald the All-Right” – for I am infallible!
+	PATIENCE.  And is it possible that you condescend to love such a girl as I?
+	GROS.  Yes, Patience, is it not strange?  I have loved you with a Florentine fourteenth-century frenzy for full fifteen years!
+	PATIENCE.  Oh, marvellous!  I have hitherto been deaf to the voice of love.  I seem now to know what love is!  It has been revealed to me – it is Archibald Grosvenor!
+	GROS.  Yes, Patience, it is!
+	PATIENCE.  (as in a trance)  We will never, never part!
+	GROS.  We will live and die together!
+	PATIENCE.  I swear it!
+	GROS.  We both swear it!
+	PATIENCE.  (recoiling from him)  But – oh, horror!
+	GROS.  What’s the matter?
+	PATIENCE.  Why, you are perfection!  A source of endless ecstasy to all who know you!
+	GROS.  I know I am.  Well?
+	PATIENCE.  Then, bless my heart, there can be nothing unselfish in loving you!
+	GROS.  Merciful powers!  I never thought of that!
+	PATIENCE.  To monopolize those features on which all women love to linger!  It would be unpardonable!
+	GROS.  Why, so it would!  Oh, fatal perfection, again you interpose between me and my happiness!
+	PATIENCE.  Oh, if you were but a thought less beautiful than you are!
+	GROS.  Would that I were; but candour compels me to admit that I’m not!
+	PATIENCE.  Our duty is clear; we must part, and for ever!
+	GROS.  Oh, misery!  And yet I cannot question the propriety of your decision.  Farewell, Patience!
+	PATIENCE.  Farewell, Archibald! But stay!
+	GROS.  Yes, Patience?
+	PATIENCE.  Although I may not love you – for you are perfection – there is nothing to prevent your loving me.  I am plain, homely, unattractive!
+	GROS.  Why, that’s true!
+	PATIENCE.  The love of such a man as you for such a girl as I must be unselfish!
+	GROS.  Unselfishness itself!
+
+DUET – PATIENCE and GROSVENOR.
+PATIENCE.	Though to marry you would very selfish be –
+GROS.		Hey, but I’m doleful  – willow willow waly!
+PATIENCE.	You may, all the same, continue loving me –
+GROS.				Hey willow waly O!
+BOTH.				All the world ignoring,
+				You’ll/I’ll go on adoring –
+			Hey, willow waly O!`
 export type SceneData = Map<string, {
-    scriptText: string,
-    speakers?: [string]
+	scriptText: string,
+	speakers?: [string]
 }>
 
 export const sceneData: SceneData = new Map([
-    ["patience_act_ii_gros_bunthorn", {
-        scriptText: patience_act_ii_gros_bunthorn
-    }
-    ], ["patience_act_ii_gros_patience", {
-        scriptText: patience_act_ii_gros_patience
-    }], ["patience_act_ii_grosvenor_maidens_1", {
-        scriptText: patience_act_ii_grosvenor_maidens_1
-    }], ["patience_act_ii_gros_bunthorn_duet", {
-        scriptText: patience_act_ii_gros_bunthorn_duet
-    }], ["patience_act_ii_gros_maidens_silver_churn", 
-        { scriptText: patience_act_ii_gros_maidens_silver_church }]
+	["patience_act_i_gros_patience_duet_and_dialogue", { scriptText: patience_act_i_gros_patience_duet_and_dialogue }],
+	["patience_act_ii_gros_bunthorn", {
+		scriptText: patience_act_ii_gros_bunthorn
+	}
+	], ["patience_act_ii_gros_patience", {
+		scriptText: patience_act_ii_gros_patience
+	}], ["patience_act_ii_grosvenor_maidens_1", {
+		scriptText: patience_act_ii_grosvenor_maidens_1
+	}], ["patience_act_ii_gros_bunthorn_duet", {
+		scriptText: patience_act_ii_gros_bunthorn_duet
+	}], ["patience_act_ii_gros_maidens_silver_churn",
+		{ scriptText: patience_act_ii_gros_maidens_silver_church }]
+
 ])
 
