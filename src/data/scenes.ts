@@ -379,6 +379,36 @@ GROS.				Hey willow waly O!
 BOTH.				All the world ignoring,
 				You’ll/I’ll go on adoring –
 			Hey, willow waly O!`
+
+const patience_act_ii_grosvenor_patience_finale = `
+(Enter GROSVENOR, followed by all the ‘every-day young girls’, who are followed by CHORUS OF DRAGOONS.  He has had his hair cut, and is dressed in an ordinary suit of dittoes and a pot hat. They all dance cheerfully round the stage in marked contrast to their former languor.)
+
+CHORUS – GROSVENOR and GIRLS.
+
+GROSVENOR.	I’m a Waterloo House young man,
+		A Sewell & Cross young man,
+	A steady and stolid-y, jolly Bank-holiday,
+		 Every-day young man.
+
+GIRLS.	We’re Swears & Wells young girls,
+		We’re Madame Louise young girls,
+	We’re prettily pattering, cheerily chattering,
+		Every-day young girls.
+
+	BUN.  Angela – Ella – Saphir – what – what does this mean?
+	ANGELA. It means that Archibald the All-Right cannot be all-wrong; and if the All-Right chooses to discard æstheticism, it proves that æstheticism ought to be discarded.
+	PATIENCE.  Oh, Archibald!  Archibald!  I’m shocked – surprised – horrified!
+	GROS.  I can’t help it.  I’m not a free agent.  I do it on compulsion.
+	PATIENCE.  This is terrible.  Go!  I shall never set eyes on you again.  But – oh, joy!
+	GROS.  What is the matter?
+	PATIENCE.  Is it quite, quite certain that you will always be a commonplace young man?
+	GROS.  Always – I’ve sworn it.
+	PATIENCE.  Why, then, there’s nothing to prevent my loving you with all the fervour at my command!
+	GROS.  Why, that’s true.
+	PATIENCE.  My Archibald!
+	GROS.  My Patience!  (They embrace.)
+	BUN.  Crushed again!`
+
 export type SceneData = Map<string, {
 	scriptText: string,
 	speakers?: [string]
@@ -396,7 +426,8 @@ export const sceneData: SceneData = new Map([
 	}], ["patience_act_ii_gros_bunthorn_duet", {
 		scriptText: patience_act_ii_gros_bunthorn_duet
 	}], ["patience_act_ii_gros_maidens_silver_churn",
-		{ scriptText: patience_act_ii_gros_maidens_silver_church }]
+		{ scriptText: patience_act_ii_gros_maidens_silver_church }],
+	["patience_act_ii_grosvenor_patience_finale", {scriptText: patience_act_ii_grosvenor_patience_finale}]
 
 ])
 
