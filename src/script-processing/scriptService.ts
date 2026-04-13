@@ -30,7 +30,7 @@ export function redactLetters(word: string, redact: number) {
 }
 
 export function boldFirstWordOfLine(text: string) {
-    return text.split(/(\n)/).map(line => line.replace(/^\s*([\w]+[.:])/, "<strong>$1</strong>")).join('')
+    return text.split(/(\n)/).map(line => line.replace(/^\s*([\w-]+[.:])/, "<strong>$1</strong>")).join('')
 }
 
 export function replaceWordsInText(text: string, redact?: number): string {

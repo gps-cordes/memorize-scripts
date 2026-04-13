@@ -48,6 +48,13 @@ describe("bold first word", () => {
                 a:
                 `)).toContain("<strong>a:</strong>")
     });
+    
+        it("bolds redaction", () => {
+        expect(
+            boldFirstWordOfLine(`
+                a-c:
+                `)).toContain("<strong>a-c:</strong>")
+    });
 
     it("Every speaker", () => {
         const newText = boldFirstWordOfLine(`a:hi
