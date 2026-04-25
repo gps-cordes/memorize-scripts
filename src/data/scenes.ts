@@ -201,32 +201,6 @@ GROSVENOR.	It drove them home!
 MAIDENS.	While this magnetic, etc.
 `
 
-const patience_act_ii_grosvenor_patience = `
-GROS.  At last they are gone!  What is this mysterious fascination that I seem to exercise over all I come across?  A curse on my fatal beauty, for I am sick of conquests!  
-
-(PATIENCE appears.)
-
-	PATIENCE. Archibald!
-	GROS.  (Turns and sees her.)  Patience!
-	PATIENCE.  I have escaped with difficulty from my Reginald.  I wanted to see you so much that I might ask you if you still love me as fondly as ever?
-	GROS.  Love you?  If the devotion of a lifetime – (Seizes her hand.)
-	PATIENCE. (indignantly)  Hold!  Unhand me, or I scream!  (He releases her.)  If you are a gentleman, pray remember that I am another’s!  (Very tenderly.)  But you do love me, don’t you?
-	GROS.  Madly, hopelessly, despairingly!
-	PATIENCE.  That’s right!  I never can be yours; but that’s right!
-	GROS.  And you love this Bunthorne?
-	PATIENCE.  With a heart-whole ecstasy that withers, and scorches, and burns, and stings!  (Sadly.)  It is my duty.
-	GROS.  Admirable girl!  But you are not happy with him?
-	PATIENCE.  Happy?  I am miserable beyond description!
-	GROS.  That’s right!  I never can be yours; but that’s right!
-	PATIENCE.  But go now.  I see dear Reginald approaching.  Farewell, dear Archibald; I cannot tell you how happy it has made me to know that you still love me.
-	GROS.  Ah, if I only dared – (Advances towards her.)
-	PATIENCE.  Sir! this language to one who is promised to another!  (Tenderly.)  Oh, Archibald, think of me sometimes, for my heart is breaking!  He is unkind to me, and you would be so loving!
-	GROS.  Loving!  (Advances towards her.)
-	PATIENCE.  Advance one step, and as I am a good and pure woman, I scream!  (Tenderly.)  Farewell, Archibald!  (Sternly.)  Stop there!  (Tenderly.)  Think of me sometimes!  (Angrily.)  Advance at your peril!  Once more, adieu!
-
-(GROSVENOR sighs, gazes sorrowfully at her, sighs deeply, and exits.  She bursts into tears.)
-`
-
 const patience_act_ii_gros_bunthorn_duet = `
 DUET – BUNTHORNE and GROSVENOR.
 
