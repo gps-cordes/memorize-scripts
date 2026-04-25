@@ -41,12 +41,14 @@ export function MemorizeApp() {
   }
 
   //TODO: only redact your lines
-  //TODO: Only redact the last portion
+  //TODO: Only redact the last portion of the scene
   //TODO: Other redaction strategies, such as every other whole word, only vowels, only consonants
   //TODO: upload own text
   //TODO: Store uploaded text in browser cache / cookie
   //TODO: Bold and highlight character names in different colors
   //TODO: Sanitize the script of html before starting to bold it
+  //TODO: Transpile to es5 for older devices
+  //TODO: High-light redacted word to reveal original
 
   return (
     <div className="memorizeApp">
