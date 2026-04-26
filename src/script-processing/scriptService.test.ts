@@ -9,7 +9,7 @@ Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec 
 Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. 
 Ad litora torquent per conubia nostra inceptos himenaeos.`
 
-describe(" test", () => {
+describe("ScriptService", () => {
     it("basic test", () => {
         // this should not pass
         expect(replaceWordsInText(lorumIpsum, 1)).not.toEqual(lorumIpsum);
