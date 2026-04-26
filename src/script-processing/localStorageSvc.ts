@@ -1,16 +1,22 @@
 function getLocalStorageMap(): Map<string, string> {
 
+    const localStorageRef = localStorage;
     const localStorageMap: Map<string, string> = new Map<string, string>();
-    for (let idx = 0; idx++; idx < localStorage.length) {
-        const key: string = localStorage.key(idx) ?? '';
-        const value: string | null = localStorage.getItem(key);
+    Object.keys(localStorageRef).map((key) => {
+        const value: string | null = localStorageRef.getItem(key);
         if (key && value) {
             localStorageMap.set(key, value);
         }
-    }
+    })
+
     return localStorageMap;
 }
 
+function uploadScriptToLocalStorage(sceneName: string, sceneText: string) {
+    localStorage.setItem(sceneName, sceneText);
+}
+
 export const localStorageSvc = {
-    getLocalStorageMap: getLocalStorageMap
+    getLocalStorageMap: getLocalStorageMap,
+    uploadScriptToLocalStorage: uploadScriptToLocalStorage
 }
