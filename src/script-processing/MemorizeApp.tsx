@@ -1,10 +1,11 @@
 
 import React, { useRef, useState } from "react";
-import { boldFirstWordOfLine, getAllScripts, replaceWordsInText } from "./scriptService";
+import { getAllScripts, replaceWordsInText } from "./scriptService";
 import { patience_act_ii_gros_bunthorn } from "../data/scenes";
 
 import "./MemorizeApp.css"
 import { localStorageSvc } from "./localStorageSvc";
+import { SceneScript } from "./SceneScript";
 
 type Views = "viewScript" | "addRemoveScene"
 
@@ -20,7 +21,6 @@ export function MemorizeApp() {
 
   const handleOpenAddSceneClick = () => {
     setCurrentView("addRemoveScene")
-    setShowScene(localStorageSvc.doesUserUploadedSceneExist())
   }
 
   // TODO: keep this from building with each change of script, only when there is a localstorage change
@@ -71,11 +71,13 @@ export function MemorizeApp() {
     if (viewString == "viewScript") {
       return <>
         {floatingHeader()}
-        {sceneScript()}
+        {SceneScript(displayScript)}
       </>
     } else if (viewString == "addRemoveScene") {
 
-      const localStorageFiles = Array.from(localStorageSvc.getLocalStorageMap().keys())
+      const localStorageMap = localStorageSvc.getLocalStorageMap()
+
+      const localStorageFiles = Array.from(localStorageMap.keys())
 
       function deleteSceneOnClick() {
         localStorageSvc.deleteScriptFromLocalStorage(sceneName)
@@ -98,6 +100,9 @@ export function MemorizeApp() {
         }
       };
 
+      const localStorageSceneText = localStorageMap.get(sceneName) ?? ""
+      const localSceneName = localStorageMap.has(sceneName) ? sceneName : ""
+
       return <>
         <div className="addRemoveScenesView"> {/* placeholder */}
           <button className="addSceneButton" onClick={handleFileUploadClick}>Add .txt scene...</button>
@@ -113,21 +118,10 @@ export function MemorizeApp() {
           <button onClick={deleteSceneOnClick}>Delete Scene</button>
           <button className="returnToSceneButton" onClick={() => setCurrentView("viewScript")}>X</button>
         </div>
-        {showScene && sceneScript()}
+        {showScene && SceneScript(localStorageSceneText)}
       </>
 
-
     }
-  }
-
-  function sceneScript() {
-    return <div className="scriptText" style={{ whiteSpace: 'pre-line' }}>
-      <p>
-        <div dangerouslySetInnerHTML={{ __html: boldFirstWordOfLine(displayScript) }} />
-        {/* Add white space on the bottom for space for the menu */}
-        <br /><br /><br /><br />
-      </p>
-    </div>;
   }
 
   function floatingHeader() {
