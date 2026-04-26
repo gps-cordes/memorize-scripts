@@ -12,11 +12,21 @@ function getLocalStorageMap(): Map<string, string> {
     return localStorageMap;
 }
 
+function doesUserUploadedSceneExist(): boolean {
+    return localStorage.length > 0;
+}
+
 function uploadScriptToLocalStorage(sceneName: string, sceneText: string) {
     localStorage.setItem(sceneName, sceneText);
 }
 
+function deleteScriptFromLocalStorage(sceneName: string){
+    localStorage.removeItem(sceneName);
+}
+
 export const localStorageSvc = {
     getLocalStorageMap: getLocalStorageMap,
-    uploadScriptToLocalStorage: uploadScriptToLocalStorage
+    uploadScriptToLocalStorage: uploadScriptToLocalStorage,
+    deleteScriptFromLocalStorage: deleteScriptFromLocalStorage,
+    doesUserUploadedSceneExist: doesUserUploadedSceneExist
 }
