@@ -383,10 +383,12 @@ GIRLS.	We’re Swears & Wells young girls,
 	GROS.  My Patience!  (They embrace.)
 	BUN.  Crushed again!`
 
-export type SceneData = Map<string, {
+export type Scene = {
 	scriptText: string,
 	speakers?: [string]
-}>
+}
+
+export type SceneData = Map<string, Scene>
 
 export const sceneData: SceneData = new Map([
 	["patience_act_i_gros_patience_duet_and_dialogue", { scriptText: patience_act_i_gros_patience_duet_and_dialogue }],
@@ -401,7 +403,7 @@ export const sceneData: SceneData = new Map([
 		scriptText: patience_act_ii_gros_bunthorn_duet
 	}], ["patience_act_ii_gros_maidens_silver_churn",
 		{ scriptText: patience_act_ii_gros_maidens_silver_church }],
-	["patience_act_ii_grosvenor_patience_finale", {scriptText: patience_act_ii_grosvenor_patience_finale}]
+	["patience_act_ii_grosvenor_patience_finale", { scriptText: patience_act_ii_grosvenor_patience_finale }]
 
 ])
 

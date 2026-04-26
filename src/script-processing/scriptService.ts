@@ -1,9 +1,33 @@
+import { sceneData, type Scene, type SceneData } from "../data/scenes";
+import { localStorageSvc } from "./localStorageSvc";
 
 
 export function creationWordMap(text: string, redact: number): Map<string, string> {
     const uniqueWords = text.split(/[\s,;.!?]+/)
 
     return new Map(uniqueWords.map(word => [word, redactLetters(word, redact)] as [string, string]))
+}
+
+
+
+export function getAllScripts(): SceneData {
+    const allScripts: SceneData = new Map<string, Scene>();
+
+    Array.from(sceneData.keys()).forEach((key) => {
+        allScripts.set(key, sceneData.get(key) as Scene)
+    })
+
+    const localStorageMap: Map<string, string> = localStorageSvc.getLocalStorageMap()
+    Array.from(localStorageMap.keys()).forEach((key) => {
+        const val = localStorageMap.get(key);
+        if (val) {
+            allScripts.set(key, { scriptText: val });
+        }
+    })
+
+
+    return allScripts;
+
 }
 
 export function redactLetters(word: string, redact: number) {

@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
-import { boldFirstWordOfLine, replaceWordsInText } from "./scriptService";
-import { patience_act_ii_gros_bunthorn, sceneData } from "../data/scenes";
+import { boldFirstWordOfLine, getAllScripts, replaceWordsInText } from "./scriptService";
+import { patience_act_ii_gros_bunthorn } from "../data/scenes";
 
 import "./MemorizeApp.css"
 
@@ -10,7 +10,7 @@ export function MemorizeApp() {
   const [redacted, setRedacted] = useState(0)
   const [sceneName, setSceneName] = useState("")
 
-  const scripts = sceneData
+  const scripts = getAllScripts();
 
   function getCurrentScene(): string {
     if (scripts && scripts.get(sceneName)) {
@@ -20,10 +20,7 @@ export function MemorizeApp() {
     return patience_act_ii_gros_bunthorn;
   }
 
-
   const displayScript = replaceWordsInText(getCurrentScene(), redacted)
-  // TODO: bold the first word of every new line before a colon to emphase character names
-  // .replaceAll(/^(\w+):/, "<b>$1</b>")
 
   function redactLess() {
     if (redacted > 0) {
@@ -59,7 +56,7 @@ export function MemorizeApp() {
           <label></label>
           <select onChange={(e: React.ChangeEvent<HTMLSelectElement>) => changeScene(e)}>
             {
-              [...sceneData].map(([sceneName]) => <option value={sceneName}>{sceneName}</option>)
+              [...scripts].map(([sceneName]) => <option value={sceneName}>{sceneName}</option>)
             }
           </select>
         </div>
