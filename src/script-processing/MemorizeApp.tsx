@@ -6,15 +6,24 @@ import { patience_act_ii_gros_bunthorn } from "../data/scenes";
 import "./MemorizeApp.css"
 import { localStorageSvc } from "./localStorageSvc";
 
+type Views = "viewScript" | "addRemoveScene"
 
 export function MemorizeApp() {
+
+
   const [redacted, setRedacted] = useState(0)
   const [sceneName, setSceneName] = useState("")
+  const [currentView, setCurrentView] = useState("viewScript" as Views)
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const handleOpenAddSceneClick = () => {
+    setCurrentView("addRemoveScene")
+  }
+
   const handleFileUploadClick = () => {
     // Trigger the hidden input's click event
+
     fileInputRef.current?.click();
   };
 
@@ -23,7 +32,10 @@ export function MemorizeApp() {
     if (files && files.length > 0) {
       console.log('Selected file:', files[0]); // Access the File object
       localStorageSvc.uploadScriptToLocalStorage(files[0].name, await files[0].text())
+      setSceneName(files[0].name)
     }
+    setCurrentView("viewScript")
+
   };
 
   // TODO: keep this from building with each change of script, only when there is a localstorage change
@@ -66,30 +78,51 @@ export function MemorizeApp() {
 
   return (
     <div className="memorizeApp">
-      <div className="floatingHeader" >
-        <button title="<" onClick={redactLess}>{'<'}</button>
-        <button className="addSceneButton" onClick={handleFileUploadClick}>Add .txt scene...</button>
-        <input  ref={fileInputRef} hidden={true} onChange={handleFileUploadChange} type="file" accept=".txt"></input>
-        <div className="sceneSelector">
-          <header>Redaction levels: <strong>{redacted}</strong></header>
-
-          <label></label>
-          <select onChange={(e: React.ChangeEvent<HTMLSelectElement>) => changeScene(e)}>
-            {
-              [...scripts].map(([sceneName]) => <option value={sceneName}>{sceneName}</option>)
-            }
-          </select>
-
-        </div>
-        <button title=">" onClick={redactMore}>{'>'}</button>
-      </div>
-      <div className="scriptText" style={{ whiteSpace: 'pre-line' }}>
-        <p>
-          <div dangerouslySetInnerHTML={{ __html: boldFirstWordOfLine(displayScript) }} />
-          {/* Add white space on the bottom for space for the menu */}
-          <br /><br /><br /><br />
-        </p>
-      </div>
+      {displayScene(currentView)}
     </div>
   )
+
+  function displayScene(viewString: Views) {
+    if (viewString == "viewScript") {
+      return <>
+        {floatingHeader()}
+        {sceneScript()}
+      </>
+    } else if (viewString == "addRemoveScene") {
+      return <>
+        <div className="addRemoveScenesView"> {/* placeholder */}
+          <button className="addSceneButton" onClick={handleFileUploadClick}>Add .txt scene...</button>
+          <input ref={fileInputRef} hidden={true} onChange={handleFileUploadChange} type="file" accept=".txt"></input>
+          <button className="returnToSceneButton" onClick={() => setCurrentView("viewScript")}>X</button>
+        </div>
+      </>
+    }
+  }
+
+  function sceneScript() {
+    return <div className="scriptText" style={{ whiteSpace: 'pre-line' }}>
+      <p>
+        <div dangerouslySetInnerHTML={{ __html: boldFirstWordOfLine(displayScript) }} />
+        {/* Add white space on the bottom for space for the menu */}
+        <br /><br /><br /><br />
+      </p>
+    </div>;
+  }
+
+  function floatingHeader() {
+    return <div className="floatingHeader">
+      <button title="<" onClick={redactLess}>{'<'}</button>
+      <button className="addRemoveScenesViewButton" onClick={handleOpenAddSceneClick}>Add scene...</button>
+      <div className="sceneSelector">
+        <header>Redaction levels: <strong>{redacted}</strong></header>
+
+        <label></label>
+        <select onChange={(e: React.ChangeEvent<HTMLSelectElement>) => changeScene(e)}>
+          {[...scripts].map(([sceneName]) => <option value={sceneName}>{sceneName}</option>)}
+        </select>
+
+      </div>
+      <button title=">" onClick={redactMore}>{'>'}</button>
+    </div>;
+  }
 }

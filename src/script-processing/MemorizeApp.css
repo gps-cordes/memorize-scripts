@@ -1,5 +1,7 @@
 .memorizeApp {}
 
+
+
 .floatingHeader {
     /* above everything */
     z-index: 99;
@@ -11,22 +13,37 @@
     gap: 10px;
     width: 100%;
 
-
-
     display: flex;
-    
+
     /* Ensures that right-most element has a border */
     height: 74px;
     box-sizing: border-box
 }
 
-.addSceneButton {
+.addRemoveScenesViewButton {
     width: 0px;
     flex-grow: 0;
     padding: 0px;
     /* align-self: flex-start; */
-
 }
+
+.addRemoveScenesView {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.addSceneButton {
+    width: 200px;
+    height: 50px;
+}
+
+.returnToSceneButton {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+}
+
 
 
 .floatingHeader * {
