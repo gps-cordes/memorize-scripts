@@ -6,6 +6,7 @@ import { patience_act_ii_gros_bunthorn } from "../data/scenes";
 import "./MemorizeApp.css"
 import { localStorageSvc } from "./localStorageSvc";
 import { SceneScript } from "./SceneScript";
+import { AddRemoveUploadedScenesView } from "./AddRemoveUploadedScenesView";
 
 type Views = "viewScript" | "addRemoveScene"
 
@@ -74,52 +75,9 @@ export function MemorizeApp() {
         {SceneScript(displayScript)}
       </>
     } else if (viewString == "addRemoveScene") {
-
-      const localStorageMap = localStorageSvc.getLocalStorageMap()
-
-      const localStorageFiles = Array.from(localStorageMap.keys())
-
-      function deleteSceneOnClick() {
-        localStorageSvc.deleteScriptFromLocalStorage(sceneName)
-        setShowScene(localStorageSvc.doesUserUploadedSceneExist())
-      }
-
-      const handleFileUploadClick = () => {
-        // Trigger the hidden input's click event
-
-        fileInputRef.current?.click();
-      };
-
-      const handleFileUploadChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-        const files = event.target.files;
-        if (files && files.length > 0) {
-          console.log('Selected file:', files[0]); // Access the File object
-          localStorageSvc.uploadScriptToLocalStorage(files[0].name, await files[0].text())
-          setSceneName(files[0].name)
-          setShowScene(true);
-        }
-      };
-
-      const localStorageSceneText = localStorageMap.get(sceneName) ?? ""
-      const localSceneName = localStorageMap.has(sceneName) ? sceneName : ""
-
-      return <>
-        <div className="addRemoveScenesView"> {/* placeholder */}
-          <button className="addSceneButton" onClick={handleFileUploadClick}>Add .txt scene...</button>
-          <input ref={fileInputRef} hidden={true} onChange={handleFileUploadChange} type="file" accept=".txt"></input>
-
-          {/* {localStorageFiles.map((sceneName) => <p >{sceneName}</p>)} */}
-
-          <select id="localStorageSceneSelector" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => changeScene(e)}>
-            
-            {localStorageFiles.map((sceneName) => <option value={sceneName}>{sceneName}</option>)}
-          </select>
-
-          <button onClick={deleteSceneOnClick}>Delete Scene</button>
-          <button className="returnToSceneButton" onClick={() => setCurrentView("viewScript")}>X</button>
-        </div>
-        {showScene && SceneScript(localStorageSceneText)}
-      </>
+      return <AddRemoveUploadedScenesView
+        sceneName={sceneName}
+        setCurrentView={setCurrentView} ></AddRemoveUploadedScenesView>
 
     }
   }

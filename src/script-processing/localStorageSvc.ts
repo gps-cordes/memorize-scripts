@@ -21,6 +21,7 @@ function uploadScriptToLocalStorage(sceneName: string, sceneText: string) {
 }
 
 function deleteScriptFromLocalStorage(sceneName: string){
+    console.log("Deleting ",sceneName," from localStorage");
     localStorage.removeItem(sceneName);
 }
 
