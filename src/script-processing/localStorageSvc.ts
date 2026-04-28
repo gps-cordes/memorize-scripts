@@ -12,6 +12,10 @@ function getLocalStorageMap(): Map<string, string> {
     return localStorageMap;
 }
 
+function getFirstFileNameStored(): string {
+    return Array.from(getLocalStorageMap().keys())[0]
+}
+
 function doesUserUploadedSceneExist(): boolean {
     return localStorage.length > 0;
 }
@@ -29,5 +33,6 @@ export const localStorageSvc = {
     getLocalStorageMap: getLocalStorageMap,
     uploadScriptToLocalStorage: uploadScriptToLocalStorage,
     deleteScriptFromLocalStorage: deleteScriptFromLocalStorage,
-    doesUserUploadedSceneExist: doesUserUploadedSceneExist
+    doesUserUploadedSceneExist: doesUserUploadedSceneExist,
+    getFirstFileNameStored: getFirstFileNameStored
 }
