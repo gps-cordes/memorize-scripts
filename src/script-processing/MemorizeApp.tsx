@@ -1,10 +1,9 @@
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { getAllScripts, replaceWordsInText } from "./scriptService";
 import { patience_act_ii_gros_bunthorn } from "../data/scenes";
 
 import "./MemorizeApp.css"
-import { localStorageSvc } from "./localStorageSvc";
 import { SceneScript } from "./SceneScript";
 import { AddRemoveUploadedScenesView } from "./AddRemoveUploadedScenesView";
 
@@ -16,9 +15,6 @@ export function MemorizeApp() {
   const [redacted, setRedacted] = useState(0)
   const [sceneName, setSceneName] = useState("")
   const [currentView, setCurrentView] = useState("viewScript" as Views)
-  const [showScene, setShowScene] = useState(true);
-
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleOpenAddSceneClick = () => {
     setCurrentView("addRemoveScene")
